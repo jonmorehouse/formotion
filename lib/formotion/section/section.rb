@@ -14,7 +14,11 @@ module Formotion
       # IF :select_one is true, then @form.render will contain
       # the checked row's value as the value for this key.
       # ELSE it does nothing.
-      :key
+      :key,
+
+      # height for footer / header
+      :footer_height,
+      :header_height,
     ]
     PROPERTIES.each {|prop|
       attr_accessor prop
