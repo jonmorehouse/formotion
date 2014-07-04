@@ -59,6 +59,14 @@ module Formotion
       self.sections[section].footer
     end
 
+    def tableView(tableView, heightForFooterInSection:section)
+      self.sections[section].footer_height || 0.0
+    end
+
+    def tableView(tableView, heightForHeaderInSection:section)
+      self.sections[section].header_height || 0.0
+    end
+
     def tableView(tableView, cellForRowAtIndexPath:indexPath)
       row = row_for_index_path(indexPath)
       reuseIdentifier = row.reuse_identifier
