@@ -117,6 +117,8 @@ module Formotion
       # DEFAULT is :blue
       :selection_style,
 
+      # Motion-Kit layout for this cell
+      :layout,
       # The following apply only to weblink rows
 
       # Whether or not to display a warning to the user before leaving the app.
@@ -168,6 +170,8 @@ module Formotion
     # Owning template row, if applicable
     attr_accessor :template_parent
     attr_accessor :template_children
+
+    # layout
 
     def initialize(params = {})
       super
